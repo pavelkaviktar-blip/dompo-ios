@@ -16,7 +16,6 @@ jobs:
 
       - name: Build iOS app
         run: |
-          cd Dompo
           xcodebuild \
             -project project.xcodeproj \
             -scheme Dompo \
