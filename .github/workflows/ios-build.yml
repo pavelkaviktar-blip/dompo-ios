@@ -1,9 +1,25 @@
-- name: Build iOS app
-  run: |
-    cd ios
-    xcodebuild \
-      -project project.xcodeproj \
-      -scheme Dompo \
-      -sdk iphoneos \
-      -configuration Release \
-      clean build
+name: iOS Build (Dompo)
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build iOS app
+        run: |
+          cd ios
+          xcodebuild \
+            -project project.xcodeproj \
+            -scheme Dompo \
+            -sdk iphoneos \
+            -configuration Release \
+            clean build
