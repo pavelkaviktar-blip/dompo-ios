@@ -14,10 +14,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install CocoaPods
+        run: |
+          cd Dompo/src
+          pod install --repo-update
+
       - name: Build iOS app
         run: |
+          cd Dompo/src
           xcodebuild \
-            -project project.xcodeproj \
+            -workspace Dompo.xcworkspace \
             -scheme Dompo \
             -sdk iphoneos \
             -configuration Release \
