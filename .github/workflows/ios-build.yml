@@ -30,4 +30,7 @@ jobs:
             -destination 'generic/platform=iOS' \
             -allowProvisioningUpdates \
             DEVELOPMENT_TEAM=3G87359N97 \
+            CODE_SIGN_STYLE=Automatic \
+            CODE_SIGN_IDENTITY="Apple Development" \
+            PRODUCT_BUNDLE_IDENTIFIER=com.dompo.app \
             clean build
