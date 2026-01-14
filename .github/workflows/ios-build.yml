@@ -14,22 +14,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.2'
-
-      - name: Install CocoaPods
-        run: |
-          sudo gem install cocoapods
-          cd ios
-          pod install
-
       - name: Build iOS app
         run: |
           cd ios
           xcodebuild \
-            -workspace Dompo.xcworkspace \
+            -project Dompo.xcodeproj \
             -scheme Dompo \
             -sdk iphoneos \
             -configuration Release \
