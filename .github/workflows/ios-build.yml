@@ -27,4 +27,7 @@ jobs:
             -scheme Dompo \
             -sdk iphoneos \
             -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -allowProvisioningUpdates \
+            DEVELOPMENT_TEAM=3G87359N97 \
             clean build
