@@ -23,6 +23,3 @@ jobs:
             -sdk iphoneos \
             -configuration Release \
             clean build
-            -sdk iphoneos \
-            -configuration Release \
-            clean build
