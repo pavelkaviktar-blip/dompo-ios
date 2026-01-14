@@ -29,8 +29,8 @@ jobs:
         run: |
           cd ios
           xcodebuild \
-            -workspace *.xcworkspace \
-            -scheme * \
+            -workspace Dompo.xcworkspace \
+            -scheme Dompo \
             -sdk iphoneos \
             -configuration Release \
             clean build
